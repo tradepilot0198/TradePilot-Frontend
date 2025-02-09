@@ -1,0 +1,56 @@
+/* Navbar.css */
+.navbar {
+    /* background: #4CAF50; */
+    background: black;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-links {
+    width: 100%;
+    margin-top:2%;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    height:20px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color:white;
+    border: 1px blue solid;
+    color: black; 
+}
+
+.logoutButton {
+    background-color: #f44336; /* Red color for logout button */
+    border: none;
+    color: white;
+    font-weight: 550;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Logo-text{
+    margin-left: 10%;
+    margin-right: 7%;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}

@@ -1,0 +1,87 @@
+/* General Container */
+.pricing-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: black;
+}
+
+/* Title */
+.pricing-title {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Pricing Cards Layout */
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.pricing-card {
+    border: 1px solid white;
+
+    color: white;
+    background: black;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: scale(1.05);
+}
+
+/* Price */
+.price {
+    font-size: 24px;
+    color: #3498db;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Subscribe Button */
+.subscribe-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.subscribe-button:hover {
+    background-color: #2980b9;
+}
+
+h3{
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

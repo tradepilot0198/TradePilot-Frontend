@@ -1,0 +1,45 @@
+.bot-settings-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input, select {
+    min-width: 240px;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}

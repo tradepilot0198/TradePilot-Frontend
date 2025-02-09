@@ -1,0 +1,55 @@
+.contact-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: black;
+    border: 1px solid white;
+}
+
+h2 {
+    color: white;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+    color: white;
+    background-color: black;
+
+}
+
+button {
+    background-color: #FCC737;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover{
+    background-color: #FCC737 !important;
+}
+
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+}
