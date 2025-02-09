@@ -1,3 +1,33 @@
+# Clear Instructions for running our React Application 
+
+### git clone 'repository_url'
+eg: https://github.com/tradepilot0198/TradePilot-Frontend
+
+open the Project in vs code
+open the integrated terminal by right click on the main folder which contains project files.
+
+run :
+### 'npm install'    <--This command immediately starts installing necessary packages needed for our project environment.
+
+after Successful Installation of all the packages we need to run the server locally and check
+
+again we need to run another command :
+### 'npm start'      <--If everything is perfect then we immediately see the url of the locally hosted react application on a specific port
+
+That Everything About running this application for more info Contact me.
+## Shubham Dhiman 
+## dhimans60@gmail.com
+
+
+
+
+
+
+
+
+
+# Below are some Unwanted readme (can skip reading)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
