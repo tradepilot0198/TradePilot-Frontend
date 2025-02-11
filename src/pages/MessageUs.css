@@ -1,0 +1,57 @@
+.messageus-container {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .messageus-container h2 {
+    text-align: center;
+  }
+  
+  .messageus-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    font-weight: bold;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .input-group textarea {
+    resize: vertical;
+    height: 90px;
+    
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  

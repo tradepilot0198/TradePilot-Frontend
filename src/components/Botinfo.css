@@ -1,0 +1,125 @@
+/* Styling for the Botinfo component */
+.botinfo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .left-div,
+  .right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 75px;
+    height: 40px;
+    background-color: transparent;
+    border: 3px solid red;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.6s ease-out;
+  }
+  
+  .toggle-on {
+    border-color: #4CAF50;
+    transition: all 0.5s 0.15s ease-out;
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: 4px;
+    width: 28px;
+    bottom: 4px;
+    right: 39px;
+    background-color: black;
+    border-radius: 19px;
+    cursor: pointer;
+    transition: all 0.3s 0.1s, width 0.1s, top 0.1s, bottom 0.1s;
+  }
+  
+  .toggle-on .toggle-button {
+    top: 3px;
+    width: 65px;
+    bottom: 3px;
+    right: 3px;
+    background-color: green;
+    box-shadow: 0 0 16px #4b7a8d;
+    transition: all 0.2s 0.1s, right 0.1s;
+  }
+  
+  .toggle-text-on,
+  .toggle-text-off {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .toggle-text-on {
+    color: rgba(0, 0, 0, 0);
+    transition: color 0.3s 0.15s;
+  }
+  
+  .toggle-on .toggle-text-on {
+    color: white;
+  }
+  
+  .toggle-text-off {
+    color: reed;
+    font-weight: bold;
+    font-size: 14px;
+    right: -26px;
+  }
+  
+  .toggle-on .toggle-text-off {
+    color: rgba(0, 0, 0, 0);
+  }
+  
+  .glow-comp {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 6px;
+    background-color: rgba(75, 122, 141, 0.1);
+    box-shadow: 0 0 12px rgba(75, 122, 141, 0.2);
+    transition: opacity 4.5s 1s;
+  }
+  
+  .toggle-on .glow-comp {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  /* Robot SVG styling */
+  svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  /* Right div text styling */
+  .right-div p {
+    color: #fff;
+    font-size: 16px;
+    width: 300px;
+    text-align: justify;
+  }
+  
+  h3 {
+    color: black;
+  }
