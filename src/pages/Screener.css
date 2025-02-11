@@ -1,0 +1,125 @@
+.screener-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+th {
+    background-color: #FF9D23;
+    color: white;
+    cursor: pointer;
+}
+
+
+th:hover {
+    background-color: #E5D0AC;
+}
+
+
+tr:nth-child(even) {
+    background-color: #E5D0AC;
+}
+
+
+tr:nth-child(odd) {
+    background-color: #889E73;
+}
+
+
+tr:hover {
+    background-color: #FFC785;
+}
+
+
+/* ✅ Pagination Styling */
+.pagination {
+    margin-top: 15px;
+}
+
+
+.pagination button {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    background-color: #FF9D23;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+.pagination button:hover {
+    background-color: #E5D0AC;
+    color: black;
+}
+
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.pagination span {
+    font-size: 18px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #FF9D23;
+}
+
+
+/* ✅ Dropdown and Input Styling */
+.items-per-page {
+    margin-bottom: 10px;
+}
+
+
+.items-per-page label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+.items-per-page select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #FF9D23;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 50px;
+}
+
+
+/* ✅ Custom Input Box for Pagination */
+.items-per-page input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #FF9D23;
+    border-radius: 4px;
+    margin-left: 5px;
+    text-align: center;
+}

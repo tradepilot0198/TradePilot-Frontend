@@ -62,7 +62,12 @@ const App = () => {
         <Route
           path="/message-us"
           element={<PrivateRoute isAuthenticated={isAuthenticated}><MessageUs /></PrivateRoute>}
+        />        
+<Route
+          path="/screener"
+          element={<PrivateRoute isAuthenticated={isAuthenticated}><Screener /></PrivateRoute>}
         />
+
       </Routes>
     </Router>
   );
