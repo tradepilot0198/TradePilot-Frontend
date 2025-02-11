@@ -4,6 +4,8 @@ import './BotSettings.css';
 import Footer from "../components/Footer";
 
 const BotSettings = () => {
+    const [brokers, setBrokers] = useState([]); // ✅ Brokers list
+    const [selectedBroker, setSelectedBroker] = useState(""); // ✅ Selected broker
     const [apiKey, setApiKey] = useState("");
     const [apiSecret, setApiSecret] = useState("");
     const [isExisting, setIsExisting] = useState(false);
@@ -12,34 +14,43 @@ const BotSettings = () => {
     const email = document.cookie.split("; ").find(row => row.startsWith("email="))?.split("=")[1] || "";
 
     useEffect(() => {
+        // ✅ Fetch broker list from backend
+        axios.get("http://localhost:5000/get-brokers")
+            .then((response) => {
+                setBrokers(response.data.brokers);
+                setSelectedBroker(response.data.brokers[0]?.brokerName || ""); // Default to first broker
+            })
+            .catch((error) => console.error("Error fetching brokers:", error));
+
         if (!email) return;
-        
-        // Fetch API details from the backend
+
+        // ✅ Fetch API details from the backend
         axios.post("http://localhost:5000/get-bind-details", { email })
             .then((response) => {
                 if (response.data.success && response.data.data) {
                     setApiKey(response.data.data.apiKey);
                     setApiSecret(response.data.data.apiSecret);
-                    setIsExisting(true); // Data exists
+                    setSelectedBroker(response.data.data.broker || ""); // Load saved broker
+                    setIsExisting(true);
                 } else {
-                    setIsExisting(false); // No entry found
+                    setIsExisting(false);
                 }
             })
             .catch((error) => console.error("Error fetching API details:", error));
     }, [email]);
 
     const handleSave = () => {
-        if (!apiKey || !apiSecret) {
-            alert("API Key and Secret are required.");
+        if (!apiKey || !apiSecret || !selectedBroker) {
+            alert("All fields are required.");
             return;
         }
 
         const url = isExisting ? "http://localhost:5000/update-bind-details" : "http://localhost:5000/insert-bind-details";
 
-        axios.post(url, { email, broker: "Binance", apiKey, apiSecret })
+        axios.post(url, { email, broker: selectedBroker, apiKey, apiSecret })
             .then((response) => {
                 alert(response.data.message);
-                setIsExisting(true); // Mark as existing after first save
+                setIsExisting(true);
             })
             .catch((error) => console.error("Error saving API details:", error));
     };
@@ -50,8 +61,14 @@ const BotSettings = () => {
                 <h2 style={{color:'white', textAlign:'left'}}>Bot Settings</h2>
                 
                 <label>Broker:</label>
-                <select disabled style={{ width: "100%", padding: "10px", marginBottom: "10px" }}>
-                    <option>Binance</option>
+                <select 
+                    value={selectedBroker} 
+                    onChange={(e) => setSelectedBroker(e.target.value)} 
+                    style={{ width: "100%", padding: "10px", marginBottom: "10px" }}
+                >
+                    {brokers.map((broker) => (
+                        <option key={broker.id} value={broker.brokerName}>{broker.brokerName}</option>
+                    ))}
                 </select>
 
                 <label>API Key:</label>

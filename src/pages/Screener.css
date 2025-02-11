@@ -6,17 +6,14 @@
     margin-right: 15%;
 }
 
-
 h2 {
     margin-bottom: 20px;
 }
-
 
 table {
     width: 100%;
     border-collapse: collapse;
 }
-
 
 th, td {
     border: 1px solid #ddd;
@@ -24,39 +21,32 @@ th, td {
     text-align: center;
 }
 
-
 th {
     background-color: #FF9D23;
     color: white;
     cursor: pointer;
 }
 
-
 th:hover {
     background-color: #E5D0AC;
 }
-
 
 tr:nth-child(even) {
     background-color: #E5D0AC;
 }
 
-
 tr:nth-child(odd) {
     background-color: #889E73;
 }
-
 
 tr:hover {
     background-color: #FFC785;
 }
 
-
 /* ✅ Pagination Styling */
 .pagination {
     margin-top: 15px;
 }
-
 
 .pagination button {
     padding: 8px 16px;
@@ -69,18 +59,15 @@ tr:hover {
     font-size: 16px;
 }
 
-
 .pagination button:hover {
     background-color: #E5D0AC;
     color: black;
 }
 
-
 .pagination button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-
 
 .pagination span {
     font-size: 18px;
@@ -89,19 +76,16 @@ tr:hover {
     color: #FF9D23;
 }
 
-
 /* ✅ Dropdown and Input Styling */
 .items-per-page {
     margin-bottom: 10px;
 }
-
 
 .items-per-page label {
     font-size: 16px;
     font-weight: bold;
     margin-right: 5px;
 }
-
 
 .items-per-page select {
     padding: 5px;
@@ -111,7 +95,6 @@ tr:hover {
     cursor: pointer;
     min-width: 50px;
 }
-
 
 /* ✅ Custom Input Box for Pagination */
 .items-per-page input {

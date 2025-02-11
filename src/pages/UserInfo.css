@@ -1,0 +1,43 @@
+.user-info-container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: orange;
+    color: white;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: green;
+    color: white;
+}
+
+.edit-btn {
+    background-color: blue;
+    color: white;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}

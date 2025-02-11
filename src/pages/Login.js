@@ -81,7 +81,6 @@ const Login = ({ setIsAuthenticated }) => {
         }
     };
 
-    // Login after OTP Verification
     const loginUser = async () => {
         if (!password) {
             alert("Please enter your password.");
@@ -90,25 +89,29 @@ const Login = ({ setIsAuthenticated }) => {
         try {
             setLoading(true);
             const response = await axios.post("http://localhost:5000/login", { email, password });
-
+    
             if (response.status === 200) {
                 const { user, token } = response.data;
-
+    
                 // Store JWT token in localStorage
                 localStorage.setItem("authToken", token); // Store JWT token
-
+    
                 // Store user details in cookies
                 document.cookie = `id=${user.id}; path=/`;
                 document.cookie = `email=${user.email}; path=/`;
                 document.cookie = `user=${user.name}; path=/`;
                 document.cookie = `loggedInTime=${Date.now()}; path=/`;
                 document.cookie = `logoutExpireAt=${Date.now() + 30 * 60 * 1000}; path=/`;
-
+    
                 // Update the authentication state
                 setIsAuthenticated(true);  // <-- Set the authentication state to true
-
-                
-                navigate("/dashboard");
+    
+                // Check if the user is admin, and redirect accordingly
+                if (user.email === 'admin@tradepilot.in') {
+                    navigate("/admindashboard");
+                } else {
+                    navigate("/dashboard");
+                }
             }
             setLoading(false);
         } catch (error) {
@@ -117,6 +120,7 @@ const Login = ({ setIsAuthenticated }) => {
             setLoading(false);
         }
     };
+    
 
     return (
         <div style={{ textAlign: "center", marginTop: "50px" , backgroundColor:'black'}}>

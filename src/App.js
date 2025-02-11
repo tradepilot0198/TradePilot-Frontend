@@ -15,6 +15,12 @@ import BotSettings from './pages/BotSettings';
 import Profile from './pages/Profile';
 import MessageUs from './pages/MessageUs';
 import ForgotPassword from './pages/ForgotPassword';
+import Screener from './pages/Screener';
+import AdminDashboard from './pages/AdminDashboard';
+import UserInfo from './pages/UserInfo';
+import Membership from './pages/Membership';
+import MembershipInfo from './pages/MembershipInfo';
+
 
 
 const App = () => {
@@ -52,6 +58,11 @@ const App = () => {
           element={<PrivateRoute isAuthenticated={isAuthenticated}><Dashboard /></PrivateRoute>}
         />
         <Route
+          path="/membership"
+          element={<PrivateRoute isAuthenticated={isAuthenticated}><Membership /></PrivateRoute>}
+        />
+        
+        <Route
           path="/bot-settings"
           element={<PrivateRoute isAuthenticated={isAuthenticated}><BotSettings /></PrivateRoute>}
         />
@@ -62,12 +73,24 @@ const App = () => {
         <Route
           path="/message-us"
           element={<PrivateRoute isAuthenticated={isAuthenticated}><MessageUs /></PrivateRoute>}
-        />        
+        />
+
 <Route
           path="/screener"
           element={<PrivateRoute isAuthenticated={isAuthenticated}><Screener /></PrivateRoute>}
         />
-
+        <Route
+          path="/admindashboard"
+          element={<PrivateRoute isAuthenticated={isAuthenticated}><AdminDashboard /></PrivateRoute>}
+        />
+         <Route
+          path="/users-info"
+          element={<PrivateRoute isAuthenticated={isAuthenticated}><UserInfo /></PrivateRoute>}
+        />
+        <Route
+          path="/membership-info"
+          element={<PrivateRoute isAuthenticated={isAuthenticated}><MembershipInfo /></PrivateRoute>}
+        />
       </Routes>
     </Router>
   );
